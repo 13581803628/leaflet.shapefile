@@ -1,10 +1,9 @@
 leaflet.shapefile
 =================
 
-requires [shapefile-js](https://github.com/calvinmetcalf/shapefile-js) plus if you want it
-to be done in a worker, you'll need [catiline](https://github.com/calvinmetcalf/catiline).
+如果你想在你的程序中运行这个插件，你必需加载 [shapefile-js](https://github.com/calvinmetcalf/shapefile-js) 文件。你可能会用到 [catiline](https://github.com/calvinmetcalf/catiline)。
 
-usage:
+**用法：**
 
 ```javascript
 new L.Shapefile(arrayBuffer or url[,options][,importUrl]);
@@ -12,7 +11,6 @@ new L.Shapefile(arrayBuffer or url[,options][,importUrl]);
 L.shapefile(arrayBuffer or url[,options][,importUrl]);
 ```
 
-Options are passed to L.Geojson as is. First argument is either an array buffer of a zipped shapefile,
-the url to a zipped shapefile, or the url to file.shp (this assumes file.dbf exists). The importUrl parameter allows you to change where a worker loads in `shp.js` when using [catiline](https://github.com/calvinmetcalf/catiline) and defaults to `shp.js`.
+参数会按照原样传递给 `L.Geojson` 方法。 第一个参数是shapefile压缩文件的阵列缓存（array buffer），或者是shapefile压缩文件的URL地址，或者是shape文件（.shp）的URL地址（要求dbf文件同时存在）。`importUrl` 参数允许你在使用[catiline](https://github.com/calvinmetcalf/catiline)时改变`shp.js`在哪里加载程序，默认情况下为 `shp.js`。
 
-To easily try this out using your own shapefile, see the demo at [leaflet.calvinmetcalf.com](http://leaflet.calvinmetcalf.com/), where you can drag-and-drop your own shapefile and have it displayed on the map.
+为了使你用自己的shapefile文件测试这个库更简单，查看 [leaflet.calvinmetcalf.com](http://leaflet.calvinmetcalf.com/)上的在线示例, 在这里你可以拖拽自己的shapefile文件在地图上显示。
